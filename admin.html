@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Central Pharmacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="admin">
+  <div class="proto-banner">Staff dashboard <strong>concept</strong> — no real login, no live inventory, no patient records.</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Central Pharmacy</span></a>
+      <button class="icon-btn menu-toggle" type="button" data-menu-toggle>Menu</button>
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html">Account</a>
+        <a class="is-active" href="admin.html">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-hero" data-admin>
+    <p class="eyebrow">Staff view</p>
+    <h1>Admin dashboard</h1>
+    <p class="muted">This screen shows how a manager might glance at orders, stock and prescription requests. It reads the same demo data created in this browser.</p>
+
+    <div class="stat-grid">
+      <div class="stat">Orders <strong data-stat-orders>0</strong></div>
+      <div class="stat">Products <strong data-stat-products>0</strong></div>
+      <div class="stat">Prescriptions <strong data-stat-rx>0</strong></div>
+      <div class="stat">Low stock <strong data-stat-low>0</strong></div>
+    </div>
+
+    <div class="layout-2">
+      <aside class="card side-nav">
+        <button type="button" data-admin-tab="orders">Orders</button>
+        <button type="button" data-admin-tab="products">Products</button>
+        <button type="button" data-admin-tab="inventory">Inventory</button>
+        <button type="button" data-admin-tab="prescriptions">Prescriptions</button>
+        <button type="button" data-admin-tab="customers">Customers</button>
+        <button type="button" data-admin-tab="reports">Reports</button>
+      </aside>
+      <div>
+        <section class="card" data-admin-panel="orders"><h2>Orders</h2><div data-admin-orders></div></section>
+        <section class="card" data-admin-panel="products" hidden><h2>Products</h2><div data-admin-products></div></section>
+        <section class="card" data-admin-panel="inventory" hidden><h2>Inventory</h2><p class="help">Items with stock under 15 are flagged for this demo.</p><div data-admin-inventory></div></section>
+        <section class="card" data-admin-panel="prescriptions" hidden><h2>Prescriptions</h2><div data-admin-rx></div></section>
+        <section class="card" data-admin-panel="customers" hidden><h2>Customers</h2><div data-admin-customers></div></section>
+        <section class="card" data-admin-panel="reports" hidden><h2>Reports</h2><div data-admin-reports></div></section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal">© <span data-year></span> Central Pharmacy prototype</div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

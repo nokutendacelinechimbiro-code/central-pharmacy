@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central Pharmacy — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<!-- data-page tells app.js which functions to run -->
+<body data-page="home">
+  <div class="proto-banner">Student prototype — <strong>demo data only</strong>. Not a live pharmacy service. No real payments or patient files.</div>
+
+  <!-- Navigation: same links on every page so the prototype feels like one site -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="">
+        <span>Central Pharmacy</span>
+      </a>
+      <button class="icon-btn menu-toggle" type="button" data-menu-toggle aria-label="Open menu">Menu</button>
+      <nav class="nav" data-nav>
+        <a class="is-active" href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html">Account</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: branding + two clear next steps -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <p class="eyebrow" style="color:#9fd4ce">Community pharmacy</p>
+          <h1>Care you can count on, close to home.</h1>
+          <p>Central Pharmacy helps you find everyday health products, send a prescription for pharmacist review, and choose delivery or collection.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="shop.html">Shop products</a>
+            <a class="btn btn-ghost" href="prescriptions.html" style="color:#fff;border-color:#3d6e76">Upload a prescription</a>
+          </div>
+        </div>
+
+        <!-- Product search: submits to shop.html with ?q= -->
+        <div class="search-panel">
+          <h2>Find a product</h2>
+          <p class="muted">Search the demo catalogue. Results open on the Shop page.</p>
+          <form class="search-row" action="shop.html" method="get">
+            <label class="sr-only" for="home-q" style="position:absolute;left:-999px">Search</label>
+            <input id="home-q" name="q" type="search" placeholder="e.g. vitamin D, thermometer">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+          <div class="trust-row">
+            <span>Pharmacist advice</span>
+            <span>Collection or delivery</span>
+            <span>Secure demo checkout</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories: filled by initHome() in app.js -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Browse</p>
+            <h2>Product categories</h2>
+          </div>
+          <a href="shop.html">View all</a>
+        </div>
+        <div class="grid-4" data-categories></div>
+      </div>
+    </section>
+
+    <!-- Featured products: also filled by JavaScript from data.js -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Popular</p>
+            <h2>Featured products</h2>
+          </div>
+        </div>
+        <div class="grid-3" data-featured></div>
+      </div>
+    </section>
+
+    <!-- Prescription CTA -->
+    <section class="section band">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" style="color:#9fd4ce">Prescriptions</p>
+          <h2>Send a prescription for pharmacist review</h2>
+          <p>In this prototype you can walk through the steps a customer would take. We only store a file name — never a real prescription image.</p>
+          <a class="btn btn-gold" href="prescriptions.html">Start the workflow</a>
+        </div>
+        <div class="card">
+          <h3>What happens next?</h3>
+          <ol>
+            <li>Customer details (demo name only)</li>
+            <li>Choose a sample file name</li>
+            <li>Pharmacist review status in your account</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">How we help</p>
+        <h2>Pharmacy services</h2>
+        <div class="grid-4" data-services style="margin-top:24px"></div>
+      </div>
+    </section>
+
+    <!-- Delivery / collection -->
+    <section class="section" style="padding-top:0">
+      <div class="container grid-3">
+        <article class="card">
+          <h3>Home delivery</h3>
+          <p>Choose delivery at checkout. This demo confirms the order in your browser only.</p>
+        </article>
+        <article class="card">
+          <h3>Click & collect</h3>
+          <p>Collect from the pharmacy counter during opening hours listed below.</p>
+        </article>
+        <article class="card">
+          <h3>Pharmacist support</h3>
+          <p>Use Contact to send a demo question. A real site would route this to the dispensary team.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact snapshot -->
+    <section class="section" style="padding-top:0">
+      <div class="container card">
+        <p class="eyebrow">Visit us</p>
+        <h2>Contact information</h2>
+        <p>12 Market Square, Demo Town, DT1 2PH<br>
+          01234 567 890 · hello@centralpharmacy.demo</p>
+        <p class="muted">Monday–Friday 08:30–18:30 · Saturday 09:00–17:00 · Sunday 10:00–14:00</p>
+        <a class="btn btn-primary" href="contact.html">Open contact page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Central Pharmacy</h3>
+        <p>A student website prototype for a professional community pharmacy.</p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <p><a href="shop.html">All products</a></p>
+        <p><a href="cart.html">Cart</a></p>
+      </div>
+      <div>
+        <h3>Care</h3>
+        <p><a href="prescriptions.html">Prescriptions</a></p>
+        <p><a href="account.html">Your account</a></p>
+      </div>
+      <div>
+        <h3>Pharmacy</h3>
+        <p><a href="about.html">About</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </div>
+    </div>
+    <div class="container legal">© <span data-year></span> Central Pharmacy prototype. Always follow a pharmacist’s advice for real medicines.</div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

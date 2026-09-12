@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — Central Pharmacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop">
+  <div class="proto-banner">Student prototype — <strong>demo catalogue</strong>. Products are sample items only.</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Central Pharmacy</span></a>
+      <button class="icon-btn menu-toggle" type="button" data-menu-toggle>Menu</button>
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a class="is-active" href="shop.html">Shop</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="account.html">Account</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container page-hero">
+    <p class="eyebrow">Catalogue</p>
+    <h1 data-shop-title>Shop</h1>
+    <p class="muted">Medicines, vitamins, baby care, skincare, personal care, first aid and medical equipment.</p>
+
+    <!-- Filters: category + live search. app.js reads these. -->
+    <div class="search-row" style="margin: 20px 0 28px; max-width: 720px">
+      <input data-shop-q type="search" placeholder="Search products">
+      <select data-category-filter aria-label="Category"></select>
+    </div>
+
+    <div class="grid-3" data-shop-grid></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container legal">© <span data-year></span> Central Pharmacy prototype</div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
