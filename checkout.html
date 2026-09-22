@@ -39,10 +39,26 @@
       <fieldset class="field" style="border:0;padding:0">
         <legend>How would you like to receive this order?</legend>
         <p><label><input type="radio" name="fulfilment" value="Collection" checked> Collect in store</label></p>
-        <p><label><input type="radio" name="fulfilment" value="Delivery"> Home delivery (demo)</label></p>
+        <p><label><input type="radio" name="fulfilment" value="Delivery"> Home delivery </label></p>
       </fieldset>
-      <div class="alert alert-warn">Payment method: pay on collection / pay on delivery. This prototype never asks for card details.</div>
-      <button class="btn btn-primary" type="submit">Place demo order</button>
+  
+    <fieldset class="field" style="border:0;padding:0">
+      <legend>Payment method</legend>
+    
+      <p><label><input type="radio" name="payment" value="Cash on collection" checked> Cash on collection</label></p>
+    
+      <p><label><input type="radio" name="payment" value="EcoCash"> EcoCash</label></p>
+    
+      <p><label><input type="radio" name="payment" value="Card"> Card</label></p>
+    
+      <p><label><input type="radio" name="payment" value="Bank transfer"> Bank transfer</label></p>
+    
+      <p><label><input type="radio" name="payment" value="ZIPIT"> ZIPIT</label></p>
+
+      <p><label><input type="radio" name="payment" value="Zimswitch Online"> Zimswitch Online</label></p>
+    </fieldset>
+    
+      <button class="btn btn-primary" type="submit">Place order</button>
     </form>
 
     <div class="card alert-ok" data-checkout-done hidden>
