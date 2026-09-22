@@ -9,19 +9,19 @@ const CP_DATA = {
   pharmacy: {
     name: "Central Pharmacy",
     tagline: "Trusted care for your community",
-    // Sample contact details for this student prototype (not a live service)
-    phone: "01234 567 890",
-    email: "hello@centralpharmacy.demo",
-    address: "12 Market Square, Demo Town, DT1 2PH",
-    hours: [
-      { day: "Monday – Friday", time: "08:30 – 18:30" },
-      { day: "Saturday", time: "09:00 – 17:00" },
-      { day: "Sunday", time: "10:00 – 14:00" }
-    ]
+    // Central Pharmacy contact details
+phone: "020 206 2664 / +263 7 8374 4458",
+email: "centralpharma.mutare@gmail.com",
+
+address: "Cuthberts Building, 69 Herbert Chitepo Street, Mutare, Manicaland, Zimbabwe",
+hours: [
+  { day: "Monday - Saturday", time: "08:00 - 19:00" },
+  { day: "Sunday", time: "08:00 - 15:00" }
+]
   },
 
   categories: [
-    { id: "medicines", name: "Medicines", blurb: "Everyday relief, pharmacist advice" },
+    { id: "medicines", name: "Medicines",  blurb: "Everyday relief, pharmacist advice" },
     { id: "vitamins", name: "Vitamins & supplements", blurb: "Support daily wellbeing" },
     { id: "baby", name: "Baby care", blurb: "Gentle products for little ones" },
     { id: "skincare", name: "Skincare", blurb: "Derm-friendly daily care" },

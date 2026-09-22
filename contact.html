@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="contact">
-  <div class="proto-banner">Demo contact form. Messages are not emailed anywhere.</div>
+  <div class="proto-banner">Prototype contact form — messages are not sent to the pharmacy yet.</div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Central Pharmacy</span></a>
@@ -35,31 +35,45 @@
     <div class="hero-grid">
       <div class="card">
         <h2>Visit / call</h2>
-        <p>12 Market Square<br>Demo Town, DT1 2PH</p>
-        <p>Phone: 01234 567 890<br>Email: hello@centralpharmacy.demo</p>
-        <h3>Opening hours</h3>
-        <p>Monday – Friday: 08:30 – 18:30<br>Saturday: 09:00 – 17:00<br>Sunday: 10:00 – 14:00</p>
-        <p class="help">Replace these sample details with the real branch when you present the prototype.</p>
+
+<p>
+  Cuthberts Building<br>
+  69 Herbert Chitepo Street<br>
+  Mutare, Manicaland, Zimbabwe
+</p>
+
+  <p>
+    Landline: 020 206 2664<br>
+    Mobile: +263 7 8374 4458<br>
+    Email: centralpharma.mutare@gmail.com
+</p>
+
+<h3>Opening hours</h3>
+
+<p>
+  Monday - Saturday: 08:00 - 19:00<br>
+  Sunday: 08:00 - 15:00
+</p>
       </div>
       <form class="card" data-contact>
         <h2>Send a message</h2>
         <div class="field">
           <label for="c-name">Name</label>
-          <input id="c-name" name="name" value="Alex Demo" required>
+          <input id="c-name" name="name" placeholder="Enter your full name"required>
         </div>
         <div class="field">
           <label for="c-email">Email</label>
-          <input id="c-email" name="email" type="email" value="alex.demo@email.test" required>
+          <input id="c-email" name="email" type="email" placeholder="Enter your email address" required>
         </div>
         <div class="field">
           <label for="c-msg">Message</label>
-          <textarea id="c-msg" name="message" rows="4" required>I would like advice about a vitamin (demo question).</textarea>
+          <textarea name="message" placeholder="How can we help you?" required></textarea>
         </div>
-        <button class="btn btn-primary" type="submit">Send demo message</button>
+        <button class="btn btn-primary" type="submit">Send message</button>
       </form>
       <div class="card alert-ok" data-contact-done hidden>
-        <h2>Message recorded (demo)</h2>
-        <p>In a live site this would reach the pharmacy inbox. Nothing was sent from this prototype.</p>
+        <h2>Message saved locally</h2>
+<p>This prototype does not send messages to the pharmacy yet. Live messaging will be connected during backend integration.</p>
       </div>
     </div>
   </main>

@@ -114,7 +114,7 @@ function setupSharedUi() {
 function renderProductCard(p) {
   return (
     '<article class="card product-card">' +
-    '<div class="product-thumb" aria-hidden="true">✚</div>' +
+    '<img src="assets/test.jpg" alt="Featured product">' +
     "<h3>" + p.name + "</h3>" +
     '<p class="muted">' + categoryName(p.category) + "</p>" +
     "<p>" + p.blurb + "</p>" +
