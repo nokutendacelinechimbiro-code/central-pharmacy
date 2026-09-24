@@ -1,0 +1,17 @@
+{
+  "name": "central-pharmacy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Central Pharmacy Mutare — community pharmacy website",
+  "scripts": {
+    "build": "node -e \"console.log('Static site ready — no compile step required')\"",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "serve-handler": "^6.1.6"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
