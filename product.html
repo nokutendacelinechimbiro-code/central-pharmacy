@@ -5,38 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Product — Central Pharmacy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="product">
-  <div class="proto-banner">Demo product page. Always read real labels and ask a pharmacist for medical advice.</div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Central Pharmacy</span></a>
-      <button class="icon-btn menu-toggle" type="button" data-menu-toggle>Menu</button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">Menu</button>
       <nav class="nav" data-nav>
         <a href="index.html">Home</a>
         <a class="is-active" href="shop.html">Shop</a>
+        <a href="beauty.html">Beauty</a>
         <a href="prescriptions.html">Prescriptions</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="account.html">Account</a>
-        <a href="admin.html">Admin</a>
       </nav>
-      <div class="header-actions">
-        <a class="icon-btn" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a>
-      </div>
     </div>
   </header>
 
-  <main class="container page-hero">
-    <p><a href="shop.html">← Back to shop</a></p>
-    <!-- Filled from ?id= in the URL -->
-    <article class="card" data-product style="max-width:640px"></article>
+  <main class="container">
+    <p class="page-hero" style="padding-bottom:0"><a href="shop.html" class="muted" style="font-size:0.875rem;font-weight:500">← Back to shop</a></p>
+    <article class="product-detail" data-product data-reveal></article>
   </main>
 
   <footer class="site-footer">
-    <div class="container legal">© <span data-year></span> Central Pharmacy prototype</div>
+    <div class="container legal">© <span data-year></span> Central Pharmacy, Mutare. Always read labels and ask a pharmacist for medical advice.</div>
   </footer>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>

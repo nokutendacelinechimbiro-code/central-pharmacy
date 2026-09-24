@@ -5,81 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — Central Pharmacy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="contact">
-  <div class="proto-banner">Prototype contact form — messages are not sent to the pharmacy yet.</div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Central Pharmacy</span></a>
-      <button class="icon-btn menu-toggle" type="button" data-menu-toggle>Menu</button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">Menu</button>
       <nav class="nav" data-nav>
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
+        <a href="beauty.html">Beauty</a>
         <a href="prescriptions.html">Prescriptions</a>
         <a href="about.html">About</a>
         <a class="is-active" href="contact.html">Contact</a>
-        <a href="account.html">Account</a>
-        <a href="admin.html">Admin</a>
       </nav>
-      <div class="header-actions">
-        <a class="icon-btn" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a>
-      </div>
     </div>
   </header>
 
   <main class="container page-hero">
     <p class="eyebrow">Talk to us</p>
     <h1>Contact Central Pharmacy</h1>
-    <div class="hero-grid">
+    <p class="lede">Visit the counter, call, or send a message. We’ll get back during opening hours.</p>
+
+    <div class="grid-2" style="margin-top:32px" data-reveal>
       <div class="card">
         <h2>Visit / call</h2>
-
-<p>
-  Cuthberts Building<br>
-  69 Herbert Chitepo Street<br>
-  Mutare, Manicaland, Zimbabwe
-</p>
-
-  <p>
-    Landline: 020 206 2664<br>
-    Mobile: +263 7 8374 4458<br>
-    Email: centralpharma.mutare@gmail.com
-</p>
-
-<h3>Opening hours</h3>
-
-<p>
-  Monday - Saturday: 08:00 - 19:00<br>
-  Sunday: 08:00 - 15:00
-</p>
+        <p>
+          Cuthberts Building<br>
+          69 Herbert Chitepo Street<br>
+          Mutare, Manicaland, Zimbabwe
+        </p>
+        <p>
+          Landline: <a href="tel:0202062664">020 206 2664</a><br>
+          Mobile: <a href="tel:+263783744458">+263 7 8374 4458</a><br>
+          Email: <a href="mailto:centralpharma.mutare@gmail.com">centralpharma.mutare@gmail.com</a>
+        </p>
+        <h3>Opening hours</h3>
+        <ul class="hours-list" data-hours></ul>
       </div>
+
       <form class="card" data-contact>
         <h2>Send a message</h2>
         <div class="field">
           <label for="c-name">Name</label>
-          <input id="c-name" name="name" placeholder="Enter your full name"required>
+          <input id="c-name" name="name" placeholder="Your full name" required>
         </div>
         <div class="field">
           <label for="c-email">Email</label>
-          <input id="c-email" name="email" type="email" placeholder="Enter your email address" required>
+          <input id="c-email" name="email" type="email" placeholder="you@email.com" required>
         </div>
         <div class="field">
           <label for="c-msg">Message</label>
-          <textarea name="message" placeholder="How can we help you?" required></textarea>
+          <textarea id="c-msg" name="message" placeholder="How can we help?" required></textarea>
         </div>
         <button class="btn btn-primary" type="submit">Send message</button>
       </form>
-      <div class="card alert-ok" data-contact-done hidden>
-        <h2>Message saved locally</h2>
-<p>This prototype does not send messages to the pharmacy yet. Live messaging will be connected during backend integration.</p>
+
+      <div class="card alert-ok" data-contact-done hidden style="grid-column:1/-1">
+        <h2>Thanks — message received</h2>
+        <p>We’ll follow up during opening hours. For urgent medicine questions, please call the pharmacy.</p>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container legal">© <span data-year></span> Central Pharmacy prototype</div>
+    <div class="container legal">© <span data-year></span> Central Pharmacy, Mutare.</div>
   </footer>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
